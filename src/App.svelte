@@ -16,13 +16,10 @@
   }
 
   :global(body.one) {
-    --primary: #ff0d51;
-    --secondary: #a88c8c;
-    --accent: #6bacbf;
-    --background: #4a4f50;
-
-    --body-font: "Montserrat", sans-serif;
-    --special-font: "Supermercado One", cursive;
+    --primary: #8f9924;
+    --secondary: #f1396d;
+    --accent: #fd6081;
+    --background: #f3ffeb;
   }
   :global(body.two) {
     --primary: #ff0d51;
