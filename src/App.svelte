@@ -19,10 +19,10 @@
     --primary: #ff0d51;
     --secondary: #a88c8c;
     --accent: #6bacbf;
-    --background: #909d9e;
+    --background: #4a4f50;
 
     --body-font: "Montserrat", sans-serif;
-    --special-font: "Roboto Slab", serif;
+    --special-font: "Supermercado One", cursive;
   }
   :global(body.two) {
     --primary: #ff0d51;
