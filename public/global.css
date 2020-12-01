@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&family=Supermercado+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap");
 
 :root {
   --primary: #332717;
@@ -52,4 +52,16 @@ h1 {
   display: inline-block;
   font-family: var(--special-font);
   letter-spacing: 1px;
+}
+
+.btn {
+  background: var(--secondary);
+  background-position: center;
+  border-radius: 10px;
+  color: var(--primary);
+  display: inline-block;
+  font: 700 0.6875rem/1.27 var(--special-font);
+  letter-spacing: 0.25px;
+  padding: 13px 30px 10px;
+  transition: all 0.25s ease, background 0.8s ease;
 }

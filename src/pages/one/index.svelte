@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { FileInput } from "../../_components";
+
   let input: number[];
 
   let partOneSet: number[];
@@ -7,17 +9,10 @@
   let partTwoSet: number[];
   let partTwoRes: number;
 
-  const handleUpload = (): void => {
-    // @ts-ignore
-    const f = document.getElementById("file-input").files[0];
-
-    var reader = new FileReader();
-    reader.readAsText(f, "UTF-8");
-    reader.onload = (e) => {
-      const s: string = e.target.result as string;
-      input = s.split("\n").map((v) => parseInt(v, 10));
-      find2020();
-    };
+  const handleUpload = (e: CustomEvent): void => {
+    const s = e.detail.data;
+    input = s.split("\n").map((v) => parseInt(v, 10));
+    find2020();
   };
 
   const is2020 = (...n: number[]): boolean => {
@@ -62,13 +57,8 @@
   };
 </script>
 
-<input
-  type="file"
-  id="file-input"
-  accept="text/text"
-  on:change={handleUpload} />
+<FileInput on:upload={handleUpload} />
 
-<!-- <p>{input}</p> -->
 {#if partOneRes}
   <h1>Part 1</h1>
   <h1>{partOneSet.join(' * ')} = {partOneRes}</h1>
